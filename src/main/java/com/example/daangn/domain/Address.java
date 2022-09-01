@@ -21,6 +21,9 @@ public class Address {
     @OneToMany(mappedBy = "address")
     private List<Post> posts = new ArrayList<>();
 
+    @OneToMany(mappedBy = "address")
+    private List<Member> members = new ArrayList<>();
+
     private String si;
     private String gu;
     private String dong;

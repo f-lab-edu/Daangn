@@ -24,8 +24,8 @@ public class PostApi {
     @PostMapping("/post")
     public ResponseEntity<Post> upload(PostDto postDto) {
         Post post = convertDtoToEntity(postDto);
-        Post updatedPost = postService.uploadPost(post);
-        return ResponseEntity.ok(postService.uploadPost(updatedPost));
+        Post updatedPost = postService.createPost(post);
+        return ResponseEntity.ok(postService.createPost(updatedPost));
     }
 
     private Post convertDtoToEntity(PostDto postDto) {

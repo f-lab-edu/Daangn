@@ -33,7 +33,7 @@ public class PostService   {
         return postDto;
     }
 
-    public Post uploadPost(Post post) {
+    public Post createPost(Post post) {
         return postRepository.save(post);
     }
 }
